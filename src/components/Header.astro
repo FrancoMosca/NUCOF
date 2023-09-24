@@ -2,22 +2,44 @@
 <header class="font-Poppins">
     <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-          <div class="p-4 flex flex-row items-center justify-between">
-            <a  href="" class="font-black text-[1.5rem] leading-[3rem]">NUCOF </a>
-            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
+          <div class="p-4">
+            <div class="overflow-hidden flex flex-row items-center justify-between">
+                <a  href="" class="font-black text-[2.5rem] leading-[3rem] animate-slideDown -translate-y-full">NUCOF</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                </button>
+            </div>
           </div>
-          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600  focus:outline-none focus:shadow-outline lg:relative lg:hover:text-orange-500 lg:after:bg-orange-600 lg:after:content-[''] lg:after:absolute lg:after:h-1 lg:after:rounded lg:after:w-0 lg:after:left-0 lg:after:-bottom-1 lg:after:duration-300 lg:hover:after:w-full" href="#">Home</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600  focus:outline-none focus:shadow-outline lg:relative lg:hover:text-orange-500 lg:after:bg-orange-600 lg:after:content-[''] lg:after:absolute lg:after:h-1 lg:after:rounded lg:after:w-0 lg:after:left-0 lg:after:-bottom-1 lg:after:duration-300 lg:hover:after:w-full" href="#">Proyectos</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600  focus:outline-none focus:shadow-outline lg:relative lg:hover:text-orange-500 lg:after:bg-orange-600 lg:after:content-[''] lg:after:absolute lg:after:h-1 lg:after:rounded lg:after:w-0 lg:after:left-0 lg:after:-bottom-1 lg:after:duration-300 lg:hover:after:w-full" href="#">Servicios</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600  focus:outline-none focus:shadow-outline lg:relative lg:hover:text-orange-500 lg:after:bg-orange-600 lg:after:content-[''] lg:after:absolute lg:after:h-1 lg:after:rounded lg:after:w-0 lg:after:left-0 lg:after:-bottom-1 lg:after:duration-300 lg:hover:after:w-full" href="#">Bio</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold text-orange-600 md:bg-orange-600 md:rounded md:text-white md:hover:bg-orange-800 md:ml-2" href="#">Contactanos</a>
+          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row overflow-hidden">
+            <a class="px-4 py-2 mt-2 text-md font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 focus:outline-none focus:shadow-outline md:relative md:hover:text-orange-500 md:after:bg-orange-600 md:after:content-[''] md:after:absolute md:after:h-1 md:after:rounded md:after:w-0 md:after:left-0 md:after:-bottom-1 md:after:duration-300 md:hover:after:w-full animate-slideDown translate-y-full" href="#">Home</a>
+            <a class="px-4 py-2 mt-2 text-md font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 focus:outline-none focus:shadow-outline md:relative md:hover:text-orange-500 md:after:bg-orange-600 md:after:content-[''] md:after:absolute md:after:h-1 md:after:rounded md:after:w-0 md:after:left-0 md:after:-bottom-1 md:after:duration-300 md:hover:after:w-full animate-slideDown translate-y-full" href="#">Proyectos</a>
+            <a class="px-4 py-2 mt-2 text-md font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 focus:outline-none focus:shadow-outline md:relative md:hover:text-orange-500 md:after:bg-orange-600 md:after:content-[''] md:after:absolute md:after:h-1 md:after:rounded md:after:w-0 md:after:left-0 md:after:-bottom-1 md:after:duration-300 md:hover:after:w-full animate-slideDown translate-y-full" href="#">Servicios</a>
+            <a class="px-4 py-2 mt-2 text-md font-semibold bg-transparent rounded-lg md:m-0 dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 focus:outline-none focus:shadow-outline md:relative md:hover:text-orange-500 md:after:bg-orange-600 md:after:content-[''] md:after:absolute md:after:h-1 md:after:rounded md:after:w-0 md:after:left-0 md:after:-bottom-1 md:after:duration-300 md:hover:after:w-full animate-slideDown translate-y-full" href="#">Bio</a>
+            <a class="px-4 py-2 mt-2 text-md font-semibold text-orange-600 md:bg-orange-600 md:rounded md:text-white md:hover:bg-orange-800 md:m-0 animate-slideDown md:-translate-y-full" href="#">Contactanos</a>
           </nav>
         </div>
     </div>
 </header>
+<script>
+    const htmlElementsToAnimate = document.getElementsByClassName('animate-slideDown')
+    const elementsToAnimate = Array.from(htmlElementsToAnimate).sort( () => Math.random() - 0.5 )
+
+    elementsToAnimate.forEach((element, index) => {
+     (element as HTMLElement).style.animationDelay = (index * 120) + 'ms';
+    });
+
+</script>
+<style>
+    @keyframes slideDown {
+      to {
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-slideDown {
+        animation: slideDown 0.5s ease forwards; 
+    }
+</style>
